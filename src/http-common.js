@@ -1,0 +1,14 @@
+import axios from "axios";
+
+// const BASE_URL = "https://eager-fawn-overcoat.cyclic.app";
+const BASE_URL = "http://localhost:3000";
+
+const headers = {
+  'Content-Type': 'application/json',
+  // 'Authorization': `Bearer ${TOKEN}`
+};
+
+export default axios.create({
+  baseURL: BASE_URL,
+  headers: headers
+});
