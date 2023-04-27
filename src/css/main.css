@@ -1,0 +1,38 @@
+.header {
+  background-color: #242526;
+}
+.logo {
+  width: 3em;
+}
+.avatar{
+    width: 3em;
+}
+.user-container{
+  position: relative;
+}
+.user-img{
+  width: 3em;
+  
+}
+.user-menu{
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+  right: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #242526;
+  padding: 1em;
+  top: 1;
+  display: none;
+}
+.user-container:hover .user-menu{
+  display: block;
+}
+.new-note{
+  background-color: #990000;
+  color: #fff;
+}
+.note {
+  background-color: #242526;
+  color: #fff;
+}
