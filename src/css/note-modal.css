@@ -2,15 +2,37 @@
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 1050;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
 }
+
 .note-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: white;
+  z-index: 1060;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+  padding: 30px;
+}
+
+.btn-close {
+  position: fixed;
+  right: 2em;
+  top: 1em;
+}
+
+.add-image{
+  width: 2.5em;
+  cursor: pointer;
+}
+
+.preview-image{
+  width: 20em;
+}

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import NoteModal from "./NoteModal";
 
-export default function NewNote() {
+export default function NewNote({userImage}) {
   const [isShowing, setIsShowing] = useState(false);
   return (
     <div className="card new-note">
       <div className="card-body">
         <div className="hstack gap-3">
           <img
-            src="https://kynguyenlamdep.com/wp-content/uploads/2022/06/avatar-cute-meo-con-than-chet.jpg"
+            src={userImage}
             className="card-img avatar rounded-circle"
             alt="avt"
           />
@@ -19,7 +19,7 @@ export default function NewNote() {
           >
             Write something...
           </button>
-          {isShowing && <NoteModal />}
+          {isShowing && <NoteModal setIsShowing={setIsShowing}/>}
         </div>
       </div>
     </div>

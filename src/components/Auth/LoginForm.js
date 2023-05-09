@@ -13,10 +13,11 @@ export default function LoginForm(props) {
     })
       .then((response) => {
         let data = response.data;
-        setMessages({
-          type: "success",
-          message: "Hi " +  data.user.name + "!!!",
-        });
+        console.log(data.access_token);
+        localStorage.setItem("user", JSON.stringify(data.user))
+        localStorage.setItem("access_token", JSON.stringify(data.access_token))
+        localStorage.setItem("refresh_token", JSON.stringify(data.refresh_token))
+        window.location.href = '/notes'
       })
       .catch((error) => {
         setMessages({

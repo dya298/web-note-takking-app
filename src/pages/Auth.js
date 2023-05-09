@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../css/auth.css";
 import LoginForm from "../components/Auth/LoginForm";
 import RegisterForm from "../components/Auth/RegisterForm";
+import "../css/auth.css";
 
 export default function Auth() {
   let [authMode, setAuthMode] = useState("signin");

@@ -9,6 +9,9 @@ class AuthService {
     return http.post("/auth/login", user);
   }
 
+  logout(refreshToken){
+    return http.post("/auth/logout", refreshToken);
+  }
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export

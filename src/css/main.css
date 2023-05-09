@@ -1,20 +1,28 @@
 .header {
   background-color: #242526;
 }
+
 .logo {
-  width: 3em;
+  width: 2.5em;
 }
-.avatar{
-    width: 3em;
+
+.avatar {
+  width: 2.5em;
 }
-.user-container{
+
+.user-container {
   position: relative;
 }
-.user-img{
-  width: 3em;
-  
+
+.user-img {
+  width: 2.5em;
 }
-.user-menu{
+
+.user-name {
+  width: max-content;
+}
+
+.user-menu {
   position: absolute;
   color: #fff;
   z-index: 1;
@@ -25,14 +33,21 @@
   top: 1;
   display: none;
 }
-.user-container:hover .user-menu{
-  display: block;
+
+.user-container:hover .user-menu {
+  display: flex;
 }
-.new-note{
+
+.new-note {
   background-color: #990000;
   color: #fff;
 }
+
 .note {
   background-color: #242526;
   color: #fff;
+}
+
+textarea{
+  resize: none;
 }
