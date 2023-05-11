@@ -15,7 +15,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  color: white;
+  color: black;
   z-index: 1060;
   border-radius: 16px;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
@@ -34,5 +34,12 @@
 }
 
 .preview-image{
-  width: 20em;
+  max-width: 20em;
+}
+/* .container-preview-image {
+  position: relative;
+} */
+.container-preview-image > .btn-close{
+  position: relative;
+  float: right;
 }

@@ -1,0 +1,15 @@
+.contaner-menu-modify {
+    position: relative;
+}
+
+.btn-modify {
+    width: max-content;
+    position: absolute;
+    right: 0;
+}
+
+.menu-modify {
+    position: absolute;
+    right: 0;
+    background-color: #212529;
+}

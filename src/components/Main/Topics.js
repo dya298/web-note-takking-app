@@ -1,14 +1,16 @@
-import { useQuery } from "@apollo/client";
-import { LOAD_TOPICS } from "../../service/Queries";
+import React from "react";
 
-export default function Topic() {
-  const { loading, error, data } = useQuery(LOAD_TOPICS);
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error : {error.message}</p>;
+export default function Topic({ topics, topicCurrent, setTopicCurrent }) {
   return (
     <div className="vstack gap-3">
-      {data.topics.map(({ title }, index) => (
-        <button key={index} type="button" className="ms-3 rounded btn btn-dark pt-3 pb-3">{title}</button>
+      {topics.map(({ title, _id }, index) => (
+        <button
+          key={index}
+          type="button"
+          onClick={() => setTopicCurrent(_id)}
+          className={topicCurrent === _id ? 'ms-3 rounded btn btn-secondary pt-3 pb' : 'ms-3 rounded btn btn-dark pt-3 pb'}>
+          {title}
+        </button>
       ))}
     </div>
   )

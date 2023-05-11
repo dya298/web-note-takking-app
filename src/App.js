@@ -1,3 +1,4 @@
+import React  from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -5,6 +6,8 @@ import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from "@ap
 import { setContext } from '@apollo/client/link/context';
 import Auth from "./pages/Auth";
 import Main from "./pages/Main";
+import PageNotFound from "./pages/PageNotFound";
+import ProtectedRoute from "./router/ProtectedRouter";
 
 function App() {
   const httpLink = createHttpLink({
@@ -29,8 +32,11 @@ function App() {
     <ApolloProvider client={client}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Auth />} />
-          <Route path="/notes" element={<Main />} />
+          <Route exact path="/" element={<Auth />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/notes" element={<Main />} />
+          </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </ApolloProvider>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NoteModal from "./NoteModal";
 
-export default function NewNote({userImage}) {
+export default function NewNote({userImage, refetch, topics, setTopicCurrent }) {
   const [isShowing, setIsShowing] = useState(false);
   return (
     <div className="card new-note">
@@ -19,7 +19,7 @@ export default function NewNote({userImage}) {
           >
             Write something...
           </button>
-          {isShowing && <NoteModal setIsShowing={setIsShowing}/>}
+          {isShowing && <NoteModal topics={topics} setIsShowing={setIsShowing} refetch={refetch} setTopicCurrent={setTopicCurrent}/>}
         </div>
       </div>
     </div>

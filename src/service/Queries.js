@@ -10,16 +10,27 @@ query{
 `
 
 export const LOAD_NOTES = gql`
-query{
+query GetNotes($topic_id: String!){
     notes(
-        first:1
+        topic_id: $topic_id,
+        first:null
     )
     {
         edges{
             cursors
             time
             node{
-                _id
+                _id,
+                title,
+                profile_img,
+                cloudinary_id,
+                topic_id,
+                desc,
+                user{
+                    image
+                    name,
+                    _id
+                }
             } 
         }
         pageInfo
